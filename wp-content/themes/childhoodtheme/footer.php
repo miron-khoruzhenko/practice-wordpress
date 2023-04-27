@@ -357,7 +357,6 @@
                     </a> -->
                     <div href="#" class="footer__logo">
                         <?php the_custom_logo(); ?>
-
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
