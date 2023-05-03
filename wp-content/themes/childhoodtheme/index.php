@@ -74,15 +74,28 @@ get_header();
         <div class="row">
             <div class="col-md-10 offset-md-1 col-lg-5 offset-lg-1">
                 <div class="about__img">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img//about.jpg" alt="про компанию">
+                    <!-- <img src="<?php the_field('about_img') ?>" alt="про компанию"> -->
+                    <?php
+                        $image = get_field('about_img');
+                        
+                        if (!empty($image)): ?>
+
+                        <img 
+                            src="<?php echo $image['url']; ?>" 
+                            alt="<?php echo $image['alt']; ?>"/>
+
+                    <?php endif;
+                        // print('<br/><br/>Array info:<br/>');
+                        // // print($image . '<br/>');
+                        // // print_r($image);
+                        // print("<pre style='font-size: 10px;'>" . print_r($image,true)."</pre>");
+                    ?>
                 </div>
             </div>
             <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-6 col-xl-5 offset-xl-1">
-                <h1 class="title underlined">Про компанию</h1>
+                <h1 class="title underlined"><?php the_field('about_title')?></h1>
                 <div class="about__text">
-                    Наша компания уже больше десяти лет дарит позитивные эмоции детям и их родителям. Мы воплощаем все детские мечты и помогаем родителям дарить счастливое детство!
-                    <br> <br>
-                    Но и взрослые иногда так нуждаются в детских эмоциях! Мы можем и это, ведь так приятно почувствовать заботу даже когда тебе за... :)
+                    <?php the_field('about_descr') ?>
                 </div>
                 <a href="#" class="button">Узнать больше</a>
             </div>
@@ -200,35 +213,45 @@ get_header();
 
 <div class="aboutus" id="aboutus">
     <div class="container">
-        <h1 class="title">Наша история</h1>
+        <h1 class="title"><?php the_field('our_history_title'); ?></h1>
         <div class="row">
             <div class="col-lg-6">
                 <div class="subtitle">
-                    Все начиналось с желания
+                    <?php the_field('our_history_subheading_1'); ?>
                 </div>
                 <div class="aboutus__text">
-                    Желания сделать как можно больше детей счастливыми. Именно с этой идеи все и зарождалось.
-                    <br><br>
-                    Первые игрушки, сделанные вручную были классическими плюшевыми медведями, которые разошлись настолько быстро, что нас завалили заказами на несколько месяцев вперед. Именно в то время мы поняли, что идем правильным путем, вкладывая все силы и эмоции в наши игрушки.
+                    <?php the_field('our_history_descr_1'); ?>
                 </div>
             </div>
             <div class="col-lg-6">
-                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img//about_1.jpg" alt="мир детства">
+                <?php 
+                    $image = get_field('our_history_img_1');
+
+                    if(!empty($image)): ?>
+                        <img class="aboutus__img" 
+                            src="<?php echo $image['url']; ?>" 
+                            alt="<?php echo $image['alt']; ?>">
+                <?php endif; ?>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-6">
-                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img//about_2.jpg" alt="мир детства">
+                <?php 
+                    $image = get_field('our_history_img_2');
+
+                    if(!empty($image)): ?>
+                        <img class="aboutus__img" 
+                            src="<?php echo $image['url']; ?>" 
+                            alt="<?php echo $image['alt']; ?>">
+                <?php endif; ?>
             </div>
             <div class="col-lg-6">
                 <div class="subtitle">
-                    Главное - качество
+                    <?php the_field('our_history_subheading_2'); ?>
                 </div>
                 <div class="aboutus__text">
-                    Мы делали их вручную, из лучших материалов и не жалея времени. Но мы росли и наш ассортимент расширился и фабричными изделиями.
-                    <br><br>
-                    Выбирая нас, вы можете быть уверены, что мы всегда следим за качеством закупок и никогда не предоставим вам опасный или некачественный товар.
+                    <?php the_field('our_history_descr_2'); ?>
                 </div>
             </div>
         </div>
@@ -236,16 +259,21 @@ get_header();
         <div class="row">
             <div class="col-lg-6">
                 <div class="subtitle">
-                    Современные технологии
+                    <?php the_field('our_history_subheading_3'); ?>
                 </div>
                 <div class="aboutus__text">
-                    И даже спустя столько лет мы продолжаем создавать игрушки вручную. Как самые простые, так и те, что идут в ногу со временем. Добавляя электроники и оживляя лучших друзей ребятишек, мы всегда следим за качеством и безопасностью. Каждая отдельная игрушка проходит индивидуальный контроль по всем необходимым стандартам.
-                    <br><br>
-                    Ведь счастливое лицо ребенка - это лучшая награда для нас!
+                    <?php the_field('our_history_descr_3'); ?>
                 </div>
             </div>
             <div class="col-lg-6">
-                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img//about_3.jpg" alt="мир детства">
+                <?php 
+                    $image = get_field('our_history_img_3');
+
+                    if(!empty($image)): ?>
+                        <img class="aboutus__img" 
+                            src="<?php echo $image['url']; ?>" 
+                            alt="<?php echo $image['alt']; ?>">
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -257,9 +285,7 @@ get_header();
         <div class="row">
             <div class="col-lg-6">
                 <div class="contacts__descr underlined">
-                    Мы находимся в Москве, метро "Парк победы", в деловом центре "Парк победы", второй этаж
-                    <br> <br>
-                    по адресу ул. Василисы Кожиной, 1
+                    <?php the_field('address_full'); ?>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -319,7 +345,7 @@ get_header();
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                <a href="tel:+797867834347">+797867834347</a>
+                                <a href="tel:<?php the_field('phone_1'); ?>"><?php the_field('phone_1'); ?></a>
                             </div>
                         </div>
                         <div class="contacts__phoneblock">
@@ -369,13 +395,13 @@ get_header();
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                <a href="tel:+797867834358">+797867834358</a>
+                                <a href="tel:<?php the_field('phone_2'); ?>"><?php the_field('phone_2'); ?></a>
                             </div>
                         </div>
                     </div>
                     <div class="contacts__mail">
                         Или напишите нам на почту
-                        <a href="mailto:mirdetstva@gmail.com">mirdetstva@gmail.com</a>
+                        <a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a>
                     </div>
                 </div>
             </div>

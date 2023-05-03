@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-Two package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-29 19:09:03+0000\n"
+"PO-Revision-Date: 2023-03-29 19:09:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,11 @@ msgstr ""
 "X-Generator: GlotPress/4.0.0-alpha.4\n"
 "Language: ru\n"
 "Project-Id-Version: Themes - Twenty Twenty-Two\n"
+
+#. Description of the theme
+#, gp-priority: high
+msgid "Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Site Editor features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours."
+msgstr "Twenty Twenty-Two, построена на прочной основе и воплощает идею о том, что каждый достоин создания поистине уникального веб-сайта. Утончённые стили темы вдохновлены разнообразием и универсальностью птиц: её типографика легкая, но сильная; цветовая палитра заимствована из природы, а элементы макета мягко ложатся на страницу. Истинное богатство Twenty Twenty-Two заключается в возможностях настройки. Эта тема создана для использования преимуществ функций полного редактирования сайта, представленных в WordPress 5.9, это означает, что цвета, типографика и макет каждой отдельной страницы вашего сайта могут быть настроены в соответствии с вашим видением. Она также включает в себя десятки шаблонов блоков, открывающих путь к широкому спектру профессионально разработанных макетов всего за несколько щелчков мышью. Создаете ли вы одностраничный веб-сайт, блог, бизнес-сайт или портфолио, Twenty Twenty-Two поможет вам создать сайт, который будет уникальным для вас."
 
 #. Theme Name of the theme
 #, gp-priority: high
